@@ -1,0 +1,38 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: auto;
+}
+.container {
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blueviolet;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.btn {
+  margin-bottom: 30px;
+}
+button {
+  gap: 10px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(224, 151, 14);
+  width: 100px;
+  height: 25px;
+  cursor: pointer;
+}
+button:hover {
+  color: black;
+  transform: scale(1.1);
+}
