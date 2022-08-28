@@ -1,18 +1,18 @@
-const yourText = document.querySelector("#text-of-player");
-const computerText = document.querySelector("#text-of-computer");
-const resultText = document.querySelector("#text-of-result");
-const buttons = document.querySelectorAll(".button");
+const yourText = document.querySelector("#player");
+const computerText = document.querySelector("#computer");
+const resultText = document.querySelector("#result");
+const button = document.querySelectorAll(".button");
 let player;
 let computer;
 let finalResult;
 
-buttons.forEach((button) =>
+button.forEach((button) =>
   button.addEventListener("click", () => {
     player = button.textContent;
     computerTurn();
     yourText.textContent = `you: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
-    resultText.textContent = check();
+    resultText.textContent = `result:${check()}`;
   })
 );
 function computerTurn() {
@@ -30,7 +30,7 @@ function computerTurn() {
   }
 }
 function check() {
-  if (player == computer) {
+  if (computer == player) {
     return "Draw!";
   } else if (computer == "rock") {
     return player == "paper" ? "you win!" : "you lose!";
